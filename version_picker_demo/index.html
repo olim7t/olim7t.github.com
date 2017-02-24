@@ -15,13 +15,14 @@ body {
 /* RELEASE DEFINITIONS */
 function serverReleases() {
   var releases = [
+    dseRelease("5.1.0-eap4", ["dse_v1","v4","v3"]),
     dseRelease("5.1.0-eap3", ["dse_v1","v4","v3"]),
     dseRelease("5.1.0-eap2", ["dse_v1","v4","v3"]),
     dseRelease("5.1.0-eap1", ["v4","v3"]),
   ];
   var i;
   // DSE 5.0 based on Cassandra 3
-  for (i = 0; i <= 6; i++) {
+  for (i = 0; i <= 7; i++) {
     releases.push(dseRelease("5.0."+i, ["v4","v3"]));
   }
   // DSE 4.8 based on Cassandra 2.1
