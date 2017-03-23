@@ -73,8 +73,14 @@ function serverReleases() {
 }
 function driverReleases() {
   var ossCoordinates = {groupId:"com.datastax.cassandra",artifactId:"cassandra-driver-core"};
-  var dseCoordinates1_0 = {groupId:"com.datastax.cassandra",artifactId:"dse_driver"};
+  var dseCoordinates1_0 = {groupId:"com.datastax.cassandra",artifactId:"dse-driver"};
+  var dseCoordinates1_2 = {groupId:"com.datastax.dse",artifactId:"dse-java-driver-core"};
   var releases = [
+    dseDriverRelease("1.2.1", ["dse_v1", "v4", "v3", "v2", "v1"], dseCoordinates1_2),
+    dseDriverRelease("1.2.0", ["dse_v1", "v4", "v3", "v2", "v1"], dseCoordinates1_2),
+    dseDriverRelease("1.2.0-rc3", ["dse_v1", "v4", "v3", "v2", "v1"], dseCoordinates1_2),
+    dseDriverRelease("1.2.0-rc2", ["dse_v1", "v4", "v3", "v2", "v1"], dseCoordinates1_2),
+    dseDriverRelease("1.2.0-rc1", ["dse_v1", "v4", "v3", "v2", "v1"], dseCoordinates1_0),
     dseDriverRelease("1.2.0-eap5", ["dse_v1", "v4", "v3", "v2", "v1"], dseCoordinates1_0),
     dseDriverRelease("1.2.0-eap4", ["dse_v1", "v4", "v3", "v2", "v1"], dseCoordinates1_0),
     dseDriverRelease("1.2.0-eap3", ["dse_v1", "v4", "v3", "v2", "v1"], dseCoordinates1_0),
